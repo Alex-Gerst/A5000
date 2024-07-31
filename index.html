@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Визитная карточка</title>
+    <title>Визитка</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,56 +11,67 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f9;
             margin: 0;
+            background-color: #f0f0f0;
         }
         .card {
-            background: #fff;
+            width: 350px;
+            height: 600px;
+            background-color: white;
+            border: 1px solid #ccc;
             border-radius: 10px;
+            overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-            padding: 20px;
-            text-align: center;
         }
         .photo {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            margin-bottom: 15px;
+            width: 100%;
+            height: 33%;
+            background-size: cover;
+            background-position: center;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
         }
         .name {
             font-size: 24px;
             font-weight: bold;
             margin: 10px 0;
         }
-        .contact-info {
-            margin: 15px 0;
-        }
-        .contact-info p {
+        .title {
+            font-size: 18px;
+            color: #555;
             margin: 5px 0;
         }
-        .contact-info a {
-            color: #3498db;
-            text-decoration: none;
+        .contact-info {
+            margin: 20px 0;
         }
-        .contact-info a:hover {
-            text-decoration: underline;
+        .contact-info div {
+            margin: 5px 0;
+        }
+        .qr-code {
+            margin-top: 20px;
+        }
+        .qr-code img {
+            width: 100px;
+            height: 100px;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <img src="photo_url" alt="Фото" class="photo">
-        <h1 class="name">Имя Фамилия</h1>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
-            <p>Телефон: <a href="tel:+1234567890">+1234567890</a></p>
-            <p>
-                <a href="viber://add?number=1234567890">Viber</a> | 
-                <a href="whatsapp://send?phone=1234567890">WhatsApp</a>
-            </p>
+        <div class="photo" style="background-image: url('https://via.placeholder.com/350x200');"></div>
+        <div class="content">
+            <div class="name">Иван Иванов</div>
+            <div class="title">Менеджер продукта</div>
+            <div class="contact-info">
+                <div>Телефон: <a href="tel:+1234567890">+1234567890</a></div>
+                <div>Email: <a href="mailto:ivan@example.com">ivan@example.com</a></div>
+                <div>Telegram: @example</div>
+            </div>
+            <div class="qr-code">
+                <img src="https://via.placeholder.com/100" alt="QR Code">
+            </div>
         </div>
     </div>
 </body>
