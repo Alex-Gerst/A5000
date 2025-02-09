@@ -18,7 +18,7 @@
             width: 350px;
             height: 600px;
             background-color: white;
-            border: 1px solid #ccc;
+            border: 1px solid #ccc; /* Тонкая линия */
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -28,10 +28,13 @@
             height: 33%;
             background-size: cover;
             background-position: center;
+            border-bottom: 1px solid #ccc; /* Тонкая линия */
         }
         .content {
             padding: 20px;
             text-align: center;
+            position: relative;
+            top: -10%; /* Поднимаем блок с текстом выше */
         }
         .name {
             font-size: 24px;
@@ -42,19 +45,54 @@
             font-size: 18px;
             color: #555;
             margin: 5px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc; /* Тонкая линия */
         }
         .contact-info {
             margin: 20px 0;
         }
         .contact-info div {
-            margin: 5px 0;
+            margin: 10px 0;
         }
-        .qr-code {
-            margin-top: 20px;
+        .qr-scheme {
+            margin-top: 40px; /* Увеличен зазор между текстом и схемой */
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* Увеличили сетку для угловых квадратов */
+            gap: 4px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 140px; /* Увеличили ширину для большего размера */
+            margin-left: auto;
+            margin-right: auto;
         }
-        .qr-code img {
-            width: 100px;
-            height: 100px;
+        .qr-cell {
+            background: #f0f0f0; /* Светлый фон для "пустых" областей */
+            aspect-ratio: 1;
+            border-radius: 2px;
+        }
+        /* Угловые квадраты, как в настоящем QR-коде */
+        .qr-cell:nth-child(1),
+        .qr-cell:nth-child(2),
+        .qr-cell:nth-child(3),
+        .qr-cell:nth-child(4),
+        .qr-cell:nth-child(5),
+        .qr-cell:nth-child(6),
+        .qr-cell:nth-child(7),
+        .qr-cell:nth-child(8),
+        .qr-cell:nth-child(15),
+        .qr-cell:nth-child(22),
+        .qr-cell:nth-child(29),
+        .qr-cell:nth-child(36),
+        .qr-cell:nth-child(43),
+        .qr-cell:nth-child(44),
+        .qr-cell:nth-child(45),
+        .qr-cell:nth-child(46),
+        .qr-cell:nth-child(47),
+        .qr-cell:nth-child(48),
+        .qr-cell:nth-child(49) {
+            background: #333; /* Темные ячейки для угловых квадратов */
         }
     </style>
 </head>
@@ -62,15 +100,64 @@
     <div class="card">
         <div class="photo" style="background-image: url('https://via.placeholder.com/350x200');"></div>
         <div class="content">
-            <div class="name">Иван Иванов</div>
+            <div class="name">Александр Потемкин</div>
             <div class="title">Менеджер продукта</div>
             <div class="contact-info">
                 <div>Телефон: <a href="tel:+1234567890">+1234567890</a></div>
-                <div>Email: <a href="mailto:ivan@example.com">ivan@example.com</a></div>
+                <div>Email: <a href="mailto:alex@example.com">alex@example.com</a></div>
                 <div>Telegram: @example</div>
             </div>
-            <div class="qr-code">
-                <img src="https://via.placeholder.com/100" alt="QR Code">
+            <div class="qr-scheme">
+                <!-- 7x7 сетка для QR-схемы -->
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
+                <div class="qr-cell"></div>
             </div>
         </div>
     </div>
